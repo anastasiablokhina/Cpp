@@ -1,20 +1,21 @@
 #include "time.h"
 
-// конструтор, инициализирующий поля нулевыми значениями
+// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ, РёРЅРёС†РёР°Р»РёР·РёСЂСѓСЋС‰РёР№ РїРѕР»СЏ РЅСѓР»РµРІС‹РјРё Р·РЅР°С‡РµРЅРёСЏРјРё
 Time::Time() : hours(0), minutes(0), seconds(0) {};
 
-// конструктор, инициализирующий поля заданными значениями
+// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ, РёРЅРёС†РёР°Р»РёР·РёСЂСѓСЋС‰РёР№ РїРѕР»СЏ Р·Р°РґР°РЅРЅС‹РјРё Р·РЅР°С‡РµРЅРёСЏРјРё
 Time::Time(int hours, int minutes, int seconds) : hours(hours), minutes(minutes), seconds(seconds)
 {
 	normalize();
 }
 
-// конструктор для преобразования вещественного типа в тип Time
+// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РґР»СЏ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РІРµС‰РµСЃС‚РІРµРЅРЅРѕРіРѕ С‚РёРїР° РІ С‚РёРї Time
 Time::Time(float val) : hours(0), minutes(0), seconds(val*3600)
 {
 	normalize();
 }
 
+// РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ Рє РєРѕСЂСЂРµРєС‚РЅРѕРјСѓ РІРёРґСѓ
 void Time::normalize()
 {
 	minutes += seconds / 60;
@@ -24,7 +25,7 @@ void Time::normalize()
 	hours %= 24;
 }
 
-// метод, складывающий значения двух объектов Time
+// РјРµС‚РѕРґ, СЃРєР»Р°РґС‹РІР°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёСЏ РґРІСѓС… РѕР±СЉРµРєС‚РѕРІ Time 
 Time Time::operator+ (const Time& t2) const
 {
 	Time t_sum(hours + t2.hours, minutes + t2.minutes, seconds + t2.seconds);
@@ -32,7 +33,7 @@ Time Time::operator+ (const Time& t2) const
 	return t_sum;
 }
 
-// метод, складывающий объект Time и переменную вещественного типа
+// РјРµС‚РѕРґ, СЃРєР»Р°РґС‹РІР°СЋС‰РёР№ РѕР±СЉРµРєС‚ Time Рё РїРµСЂРµРјРµРЅРЅСѓСЋ РІРµС‰РµСЃС‚РІРµРЅРЅРѕРіРѕ С‚РёРїР° 
 Time Time::operator+ (const float& val) const
 {
 	Time t2 = Time(val);
@@ -41,7 +42,7 @@ Time Time::operator+ (const float& val) const
 	return t_sum;
 }
 
-// метод, вычитающий значения двух объектов Time
+// РјРµС‚РѕРґ, РІС‹С‡РёС‚Р°СЋС‰РёР№ Р·РЅР°С‡РµРЅРёСЏ РґРІСѓС… РѕР±СЉРµРєС‚РѕРІ Time 
 Time Time::operator- (const Time& t2) const
 {
 	Time t_sub(0, 0, hours * 3600 + minutes * 60 + seconds - (t2.hours * 3600 + t2.minutes * 60 + t2.seconds));
@@ -49,7 +50,7 @@ Time Time::operator- (const Time& t2) const
 	return t_sub;
 }
 
-// метод, складывающий переменную вещественного типа и объект Time
+// РјРµС‚РѕРґ, СЃРєР»Р°РґС‹РІР°СЋС‰РёР№ РїРµСЂРµРјРµРЅРЅСѓСЋ РІРµС‰РµСЃС‚РІРµРЅРЅРѕРіРѕ С‚РёРїР° Рё РѕР±СЉРµРєС‚ Time 
 Time operator+(float val, const Time& t2)
 {
 	Time t1 = Time(val);
@@ -59,7 +60,7 @@ Time operator+(float val, const Time& t2)
 
 }
 
-// методы, сравнивающие два объекта Time
+// РјРµС‚РѕРґС‹, СЃСЂР°РІРЅРёРІР°СЋС‰РёРµ РґРІР° РѕР±СЉРµРєС‚Р° Time
 bool operator<(const Time& t1, const Time& t2)
 {
 	int t1Sec = t1.hours * 3600 + t1.minutes * 60 + t1.seconds;
@@ -74,7 +75,7 @@ bool operator>(const Time& t1, const Time& t2)
 	return t1Sec > t2Sec;
 }
 
-// перегрузка оператора потокового вывода
+// РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РїРѕС‚РѕРєРѕРІРѕРіРѕ РІС‹РІРѕРґР°
 std::ostream& operator<< (std::ostream& out, const Time& t)
 {
 	return out << t.hours << ":" << t.minutes << ":" << t.seconds;
