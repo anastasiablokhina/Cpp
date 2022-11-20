@@ -6,17 +6,17 @@ using namespace std;
 class teacher : public human
 {
 private:
-	// Учебные часы
+	// РЈС‡РµР±РЅС‹Рµ С‡Р°СЃС‹
 	unsigned int work_time;
 
 public:
-	// Конструктор класса teacher
+	// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР° teacher
 	teacher(string last_name,
 		string name,
 		string second_name,
-		unsigned int work_time); // Количество учебных часов за семестр у преподавателя
+		unsigned int work_time); // РљРѕР»РёС‡РµСЃС‚РІРѕ СѓС‡РµР±РЅС‹С… С‡Р°СЃРѕРІ Р·Р° СЃРµРјРµСЃС‚СЂ Сѓ РїСЂРµРїРѕРґР°РІР°С‚РµР»СЏ
 
-	// Получение количества учебных часов
+	// РџРѕР»СѓС‡РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° СѓС‡РµР±РЅС‹С… С‡Р°СЃРѕРІ
 	unsigned int get_work_time();
 };
 
