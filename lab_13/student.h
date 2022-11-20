@@ -7,12 +7,12 @@ using namespace std;
 class student : public human
 {
 public:
-	// Конструктор класса Student
+	// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР° Student
 	student(string last_name, string name, string second_name, vector<int> scores);
-	// Получение среднего балла студента
+	// РџРѕР»СѓС‡РµРЅРёРµ СЃСЂРµРґРЅРµРіРѕ Р±Р°Р»Р»Р° СЃС‚СѓРґРµРЅС‚Р°
 	float get_average_score();
 private:
-	// Оценки студента
+	// РћС†РµРЅРєРё СЃС‚СѓРґРµРЅС‚Р°
 	vector<int> scores;
 };
 
