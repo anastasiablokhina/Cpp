@@ -1,14 +1,14 @@
 #include "human.h"
 using namespace std;
 
-// Конструктор класса human
+// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР° human
 human::human(string last_name, string name, string second_name)
 {
 	this->last_name = last_name;
 	this->name = name;
 	this->second_name = second_name;
 }
-// Получение ФИО человека
+// РџРѕР»СѓС‡РµРЅРёРµ Р¤РРћ С‡РµР»РѕРІРµРєР°
 string human::get_full_name()
 {
 	ostringstream full_name;
