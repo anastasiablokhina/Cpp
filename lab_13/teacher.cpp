@@ -1,11 +1,11 @@
 #include "teacher.h"
 using namespace std;
 
-// Êîíñòðóêòîð êëàññà teacher
+// ÐšÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ ÐºÐ»Ð°ÑÑÐ° teacher
 teacher::teacher(string last_name, 
 	string name,
 	string second_name,
-	unsigned int work_time) // Êîëè÷åñòâî ó÷åáíûõ ÷àñîâ çà ñåìåñòð ó ïðåïîäàâàòåëÿ
+	unsigned int work_time) // ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑƒÑ‡ÐµÐ±Ð½Ñ‹Ñ… Ñ‡Ð°ÑÐ¾Ð² Ð·Ð° ÑÐµÐ¼ÐµÑÑ‚Ñ€ Ñƒ Ð¿Ñ€ÐµÐ¿Ð¾Ð´Ð°Ð²Ð°Ñ‚ÐµÐ»Ñ
 	: human(last_name, 
 			name,
 			second_name)
@@ -13,7 +13,7 @@ teacher::teacher(string last_name,
 	this->work_time = work_time;
 }
 
-// Ïîëó÷åíèå êîëè÷åñòâà ó÷åáíûõ ÷àñîâ
+// ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð¸Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð° ÑƒÑ‡ÐµÐ±Ð½Ñ‹Ñ… Ñ‡Ð°ÑÐ¾Ð²
 unsigned int teacher::get_work_time()
 {
 	return this->work_time;
