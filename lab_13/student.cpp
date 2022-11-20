@@ -1,22 +1,22 @@
 #include "student.h"
 using namespace std;
 
-// Конструктор класса Student
+// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР° Student
 student::student(string last_name, string name, string second_name, vector<int> scores) : human(last_name, name, second_name) 
 {
 	this->scores = scores;
 }
 
-// Получение среднего балла студента
+// РџРѕР»СѓС‡РµРЅРёРµ СЃСЂРµРґРЅРµРіРѕ Р±Р°Р»Р»Р° СЃС‚СѓРґРµРЅС‚Р°
 float student::get_average_score()
 {
-	// Общее количество оценок
+	// РћР±С‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РѕС†РµРЅРѕРє
 	unsigned int count_scores = this->scores.size();
 
-	// Сумма всех оценок студента
+	// РЎСѓРјРјР° РІСЃРµС… РѕС†РµРЅРѕРє СЃС‚СѓРґРµРЅС‚Р°
 	unsigned int sum_scores = 0;
 
-	// Средний балл
+	// РЎСЂРµРґРЅРёР№ Р±Р°Р»Р»
 	float average_score;
 
 	for (unsigned int i = 0; i < count_scores; ++i)
