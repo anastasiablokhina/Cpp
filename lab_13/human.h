@@ -6,14 +6,14 @@ using namespace std;
 class human
 {
 public:
-	// Конструктор класса human
+	// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР° human
 	human(string last_name, string name, string second_name);
 
-	// Получение ФИО человека
+	// РџРѕР»СѓС‡РµРЅРёРµ Р¤РРћ С‡РµР»РѕРІРµРєР°
 	virtual string get_full_name();
 private:
-	string name; // имя
-	string last_name; // фамилия
-	string second_name; // отчество
+	string name; // РёРјСЏ
+	string last_name; // С„Р°РјРёР»РёСЏ
+	string second_name; // РѕС‚С‡РµСЃС‚РІРѕ
 };
 
