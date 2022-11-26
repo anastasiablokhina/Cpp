@@ -18,3 +18,14 @@ unsigned int teacher::get_work_time()
 {
 	return this->work_time;
 }
+
+// Получение информации о преподавателе
+string teacher::get_info()
+{
+	ostringstream full_name;
+	full_name << this->last_name << " "
+		<< this->name << " "
+		<< this->second_name << ". Количество часов: "
+		<< this->get_work_time();
+	return full_name.str();
+}
