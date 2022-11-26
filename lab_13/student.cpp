@@ -26,3 +26,14 @@ float student::get_average_score()
 	average_score = (float)sum_scores / (float)count_scores;
 	return average_score;
 }
+
+// Получение информации о студенте
+string student::get_info()
+{
+	ostringstream full_name;
+	full_name << this->last_name << " "
+		<< this->name << " "
+		<< this->second_name << ". Cредний балл: "
+		<< this->get_average_score();
+	return full_name.str();
+}
