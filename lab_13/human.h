@@ -11,7 +11,7 @@ public:
 
 	// Получение ФИО человека
 	virtual string get_info();
-private:
+protected:
 	string name; // имя
 	string last_name; // фамилия
 	string second_name; // отчество
