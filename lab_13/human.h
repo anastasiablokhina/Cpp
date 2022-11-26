@@ -10,7 +10,7 @@ public:
 	human(string last_name, string name, string second_name);
 
 	// Получение ФИО человека
-	virtual string get_full_name();
+	virtual string get_info();
 private:
 	string name; // имя
 	string last_name; // фамилия
