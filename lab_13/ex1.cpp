@@ -25,13 +25,11 @@ int main()
     scores.push_back(3);
 
     student* stud = new student("Петров", "Иван", "Алексеевич", scores);
-    cout << stud->get_full_name() << endl;
-    cout << "Средний балл : " << stud->get_average_score() << endl;
-
+    cout << stud->get_info() << endl;
+    
     unsigned int teacher_work_time = 40;
     teacher* tch = new teacher("Сергеев", "Дмитрий", "Сергеевич", teacher_work_time);
-    cout << tch->get_full_name() << endl;
-    cout << "Количество часов: " << tch->get_work_time() << endl;
+    cout << tch->get_info() << endl;
 
     return 0;
 }
