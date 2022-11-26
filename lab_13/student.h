@@ -11,6 +11,8 @@ public:
 	student(string last_name, string name, string second_name, vector<int> scores);
 	// Получение среднего балла студента
 	float get_average_score();
+	// Получение информации о студенте
+	string get_info();
 private:
 	// Оценки студента
 	vector<int> scores;
