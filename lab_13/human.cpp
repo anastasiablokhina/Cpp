@@ -9,7 +9,7 @@ human::human(string last_name, string name, string second_name)
 	this->second_name = second_name;
 }
 // Получение ФИО человека
-string human::get_full_name()
+string human::get_info()
 {
 	ostringstream full_name;
 	full_name << this->last_name << " "
