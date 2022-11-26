@@ -28,7 +28,6 @@ int main()
     {
         string name;
         char grade;
-        char choice;
 
         cout << "Enter student name and grade ";
         cin >> name >> grade;
